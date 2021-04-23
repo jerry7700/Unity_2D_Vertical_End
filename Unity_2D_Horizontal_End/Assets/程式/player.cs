@@ -18,10 +18,18 @@ public class player : MonoBehaviour
 
     void Update()
     {
+        Move();
+    }
+
+    /// <summary>
+    /// 移動
+    /// </summary>
+    private void Move()
+    {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if(movement.x !=0)
+        if (movement.x != 0)
         {
             transform.localScale = new Vector3(-movement.x, 1, 1);
         }
